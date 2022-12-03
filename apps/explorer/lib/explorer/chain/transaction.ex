@@ -473,7 +473,7 @@ defmodule Explorer.Chain.Transaction do
   def decoded_input_data(%__MODULE__{to_address: nil}, _), do: {:error, :no_to_address}
   def decoded_input_data(%__MODULE__{input: %{bytes: bytes}}, _) when bytes in [nil, <<>>], do: {:error, :no_input_data}
 
-  if Application.get_env(:explorer, :decode_not_a_contract_calls) do
+  if not Application.compile_env(:explorer, :decode_not_a_contract_calls) do
     def decoded_input_data(%__MODULE__{to_address: %{contract_code: nil}}, _), do: {:error, :not_a_contract_call}
   end
 
