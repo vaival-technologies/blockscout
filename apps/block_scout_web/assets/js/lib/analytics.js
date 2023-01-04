@@ -22,7 +22,7 @@ export function init () {
 
   if (amplitudeApiKey) {
     if (amplitudeUrl) {
-      amplitudeInit(amplitudeApiKey, { serverUrl: amplitudeUrl })
+      amplitudeInit(amplitudeApiKey, undefined, { serverUrl: amplitudeUrl })
     } else {
       amplitudeInit(amplitudeApiKey)
     }

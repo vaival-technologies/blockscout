@@ -71,6 +71,7 @@
 
 ### Chore
 
+- [#6695](https://github.com/blockscout/blockscout/pull/6695) - Process errors and warnings with enables check-js feature in VS code
 - [#6607](https://github.com/blockscout/blockscout/pull/6607) - Run e2e tests after PR review
 - [#6606](https://github.com/blockscout/blockscout/pull/6606) - Add ARG SESSION_COOKIE_DOMAIN to Dockerfile
 - [#6600](https://github.com/blockscout/blockscout/pull/6600) - Token stub icon
