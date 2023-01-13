@@ -19,7 +19,7 @@ services:
         POSTGRES_USER: 'postgres'
         POSTGRES_HOST_AUTH_METHOD: 'trust'
     ports:
-      - 7432:5432
+      - 127.0.0.1:7432:5432
 
   blockscout:
     depends_on:
@@ -63,7 +63,7 @@ services:
     env_file:
       -  ./envs/common-smart-contract-verifier.env
     ports:
-      - 8043:8043
+      - 127.0.0.1:8043:8043
 
   visualizer:
     image: ghcr.io/blockscout/visualizer:${VISUALIZER_DOCKER_TAG:-latest}
@@ -72,4 +72,4 @@ services:
     env_file:
       -  ./envs/common-visualizer.env
     ports:
-      - 8050:8050
+      - 127.0.0.1:8050:8050
